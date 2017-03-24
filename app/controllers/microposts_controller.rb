@@ -8,8 +8,9 @@ class MicropostsController < ApplicationController
       flash[:success] = 'メッセージを投稿しました。'
       redirect_to root_url
     else
-      flash.now[:danger] = 'メッセージの投稿に失敗しました。'
-      render 'toppages/new'
+      flash[:danger] = 'メッセージの投稿に失敗しました。'
+      redirect_to root_url
+      # render 'toppages/index'
     end
   end
 
